@@ -16,9 +16,9 @@
 
 PRODUCT_HARDWARE := bonito
 
-include device/google/bonito/device-common.mk
+include device/google/b4s4/device-common.mk
 
-DEVICE_PACKAGE_OVERLAYS += device/google/bonito/bonito/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/b4s4/bonito/overlay
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
@@ -32,11 +32,11 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlayActiveEdge \
 
 PRODUCT_COPY_FILES += \
-    device/google/bonito/nfc/libnfc-nxp.bonito.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    device/google/bonito/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020A.conf \
-    device/google/bonito/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020B.conf \
-    device/google/bonito/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020C.conf \
-    device/google/bonito/nfc/libnfc-nxp.bonito.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020D.conf
+    device/google/b4s4/nfc/libnfc-nxp.bonito.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    device/google/b4s4/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020A.conf \
+    device/google/b4s4/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020B.conf \
+    device/google/b4s4/nfc/libnfc-nxp.bonito.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020C.conf \
+    device/google/b4s4/nfc/libnfc-nxp.bonito.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020D.conf
 
 # Vibrator HAL
 PRODUCT_PRODUCT_PROPERTIES +=\
@@ -51,7 +51,7 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 
 # DRV2624 Haptics Waveform
 PRODUCT_COPY_FILES += \
-    device/google/bonito/vibrator/drv2624/drv2624_B4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/drv2624.bin
+    device/google/b4s4/vibrator/drv2624/drv2624_B4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/drv2624.bin
 
 # camera front flashColor
 PRODUCT_PROPERTY_OVERRIDES += \

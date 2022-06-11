@@ -18,7 +18,7 @@ include build/make/target/board/BoardConfigMainlineCommon.mk
 include build/make/target/board/BoardConfigPixelCommon.mk
 
 TARGET_BOARD_PLATFORM := sdm710
-TARGET_BOARD_INFO_FILE := device/google/bonito/board-info.txt
+TARGET_BOARD_INFO_FILE := device/google/b4s4/board-info.txt
 USES_DEVICE_GOOGLE_B4S4 := true
 
 TARGET_ARCH := arm64
@@ -35,7 +35,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
-TARGET_BOARD_COMMON_PATH := device/google/bonito/sdm710
+TARGET_BOARD_COMMON_PATH := device/google/b4s4/sdm710
 
 BUILD_BROKEN_DUP_RULES := true
 
@@ -87,8 +87,8 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := device/google/bonito/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/google/bonito/fstab.hardware
+TARGET_RECOVERY_WIPE := device/google/b4s4/recovery.wipe
+TARGET_RECOVERY_FSTAB := device/google/b4s4/fstab.hardware
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_pixel \
@@ -125,9 +125,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_ROOT_EXTRA_SYMLINKS := /mnt/vendor/persist:/persist
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp
 
-include device/google/bonito/sepolicy/bonito-sepolicy.mk
+include device/google/b4s4/sepolicy/bonito-sepolicy.mk
 
-TARGET_FS_CONFIG_GEN := device/google/bonito/config.fs
+TARGET_FS_CONFIG_GEN := device/google/b4s4/config.fs
 
 QCOM_BOARD_PLATFORMS += sdm710
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -201,14 +201,14 @@ TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DRM_PP := true
 
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/google/bonito/manifest.xml
-DEVICE_MATRIX_FILE := device/google/bonito/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/bonito/device_framework_matrix.xml
+DEVICE_MANIFEST_FILE := device/google/b4s4/manifest.xml
+DEVICE_MATRIX_FILE := device/google/b4s4/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/b4s4/device_framework_matrix.xml
 
 # Userdebug only Vendor Interface Manifest
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/google/bonito/framework_manifest_userdebug.xml
-DEVICE_MATRIX_FILE += device/google/bonito/compatibility_matrix_userdebug.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/google/b4s4/framework_manifest_userdebug.xml
+DEVICE_MATRIX_FILE += device/google/b4s4/compatibility_matrix_userdebug.xml
 endif
 
 ODM_MANIFEST_SKUS := \
@@ -221,14 +221,14 @@ ODM_MANIFEST_SKUS := \
     G020G \
     G020H \
 
-ODM_MANIFEST_G020A_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020B_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020C_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020D_FILES := device/google/bonito/nfc/manifest_se_eSE1.xml
-ODM_MANIFEST_G020E_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020F_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020G_FILES := device/google/bonito/nfc/manifest_se_SIM1.xml
-ODM_MANIFEST_G020H_FILES := device/google/bonito/nfc/manifest_se_eSE1.xml
+ODM_MANIFEST_G020A_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020B_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020C_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020D_FILES := device/google/b4s4/nfc/manifest_se_eSE1.xml
+ODM_MANIFEST_G020E_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020F_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020G_FILES := device/google/b4s4/nfc/manifest_se_SIM1.xml
+ODM_MANIFEST_G020H_FILES := device/google/b4s4/nfc/manifest_se_eSE1.xml
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true

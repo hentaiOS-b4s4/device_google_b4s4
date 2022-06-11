@@ -21,8 +21,8 @@ else
   TARGET_SCREEN_DENSITY := 440
   TARGET_RECOVERY_UI_MARGIN_HEIGHT := 20
 
-  include device/google/bonito/BoardConfig-common.mk
+  include device/google/b4s4/BoardConfig-common.mk
   -include vendor/google_devices/bonito/proprietary/BoardConfigVendor.mk
 endif
 
-include device/google/bonito/sargo/BoardConfigLineage.mk
+include device/google/b4s4/sargo/BoardConfigCustom.mk

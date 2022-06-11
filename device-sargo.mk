@@ -16,9 +16,9 @@
 
 PRODUCT_HARDWARE := sargo
 
-include device/google/bonito/device-common.mk
+include device/google/b4s4/device-common.mk
 
-DEVICE_PACKAGE_OVERLAYS += device/google/bonito/sargo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/b4s4/sargo/overlay
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
@@ -36,11 +36,11 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlayActiveEdge \
 
 PRODUCT_COPY_FILES += \
-    device/google/bonito/nfc/libnfc-nxp.sargo.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    device/google/bonito/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020E.conf \
-    device/google/bonito/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020F.conf \
-    device/google/bonito/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020G.conf \
-    device/google/bonito/nfc/libnfc-nxp.sargo.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020H.conf
+    device/google/b4s4/nfc/libnfc-nxp.sargo.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    device/google/b4s4/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020E.conf \
+    device/google/b4s4/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020F.conf \
+    device/google/b4s4/nfc/libnfc-nxp.sargo.uicc.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020G.conf \
+    device/google/b4s4/nfc/libnfc-nxp.sargo.ese.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-G020H.conf
 
 PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.height_ratio=1.2
 
@@ -57,7 +57,7 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 
 # DRV2624 Haptics Waveform
 PRODUCT_COPY_FILES += \
-    device/google/bonito/vibrator/drv2624/drv2624_S4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/drv2624.bin
+    device/google/b4s4/vibrator/drv2624/drv2624_S4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/drv2624.bin
 
 # camera front flashColor
 PRODUCT_PROPERTY_OVERRIDES += \

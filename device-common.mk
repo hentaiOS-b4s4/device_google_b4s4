@@ -16,7 +16,7 @@
 
 TARGET_USERIMAGES_USE_F2FS := true
 
-LOCAL_PATH := device/google/bonito
+LOCAL_PATH := device/google/b4s4
 
 # define hardware platform
 PRODUCT_PLATFORM := sdm670
@@ -24,8 +24,8 @@ PRODUCT_PLATFORM := sdm670
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-include device/google/bonito/device-audio-mfg.mk
-include device/google/bonito/device.mk
+include device/google/b4s4/device-audio-mfg.mk
+include device/google/b4s4/device.mk
 
 # Bug 77867216
 PRODUCT_PROPERTY_OVERRIDES += audio.adm.buffering.ms=3
@@ -94,7 +94,7 @@ persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 
 # Modem loging file
 PRODUCT_COPY_FILES += \
-    device/google/bonito/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
+    device/google/b4s4/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
 
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
